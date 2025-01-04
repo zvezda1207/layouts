@@ -1,14 +1,14 @@
-import React from 'react'; 
+import React from 'react';
 
-const ShopCard = ({ product }) => {
+const ShopCard = ({ item }) => {
     return (
         <div className="shop-card">
-            <img src={product.img} alt={product.name} /> 
-            <h3>{product.name}</h3> 
-            <p>Price: ${product.price}</p> 
-            <p>Color: {product.color}</p> 
+            <img src={item.img} alt={item.name} style={{ width: '100%', height: 'auto' }} />
+            <h3>{item.name}</h3>
+            <p className="price">${item.price}</p>
+            <button className="add-to-cart">Add to Cart</button>
         </div>
     );
 };
 
-export default ShopCard; 
+export default ShopCard;

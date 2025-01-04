@@ -44,7 +44,6 @@ const Store = () => {
 
     return (
         <div>
-            <h2>Магазин отображается!</h2>
             <IconSwitch icon={isListView ? "view_list" : "view_module"} onSwitch={onSwitch} />
             {isListView ? <ListView items={products} /> : <CardsView cards={products} />}
         </div>

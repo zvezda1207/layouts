@@ -1,31 +1,17 @@
-// import React from 'react';
-// import ShopItem from './ShopItem';
-
-// const ListView = ({ items }) => {
-//   return (
-//     <ul className="list-view">
-//       {items.map((product, index) => (
-//         <ShopItem key={index} product={product} />
-//       ))}
-//     </ul>
-//   );
-// };
-
-// export default ListView;
-
-import React from 'react'; 
+import React from 'react';
 
 const ListView = ({ items }) => {
     return (
-        <ul>
-            {items.map((item, index) => (
-                <li key={index}>
-                    <img src={item.img} alt={item.name} width="50" /> {/* Изображение товара */}
-                    {item.name} - ${item.price} {/* Название и цена товара */}
-                </li>
+        <div className="list-view-container">
+            {items.map((item) => (
+                <div key={item.name} className="list-item">
+                    <img src={item.img} alt={item.name} style={{ width: '50px', height: 'auto' }} />
+                    <span>{item.name}</span>
+                    <span className="price">${item.price} - Add to Cart</span>
+                </div>
             ))}
-        </ul>
+        </div>
     );
 };
 
-export default ListView; 
+export default ListView;
